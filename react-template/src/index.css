@@ -11,7 +11,7 @@
 }
 .top-nav {
     border-radius: 0 0 19px 19px; 
-    margin: -3px 0;
+    margin: -3px 113px;
     padding: 15px 20px;
     position: relative;
     background: #1a1a1a; 
@@ -22,9 +22,40 @@
 }
 
 .sec-1{
-  background-image: url('./assets/Header & Banner.png'); /* correct syntax */
-    background-size: cover;       /* make it cover the whole div */
-    background-position: center;  /* center the image */
-    background-repeat: no-repeat; /* no repeat */
-    min-height: 100vh; 
+  background-image: url("./assets/Header & Banner.png");
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    width: 100vw;                 
+    height: 170vh; 
+    text-align: center;
+}
+
+.sec-1-ctr-txt {
+    color: white;
+    text-align: center;      
+    margin: auto;            
+    max-width: 725px;           
+}
+
+.sec-1-ctr-txt h2 {
+    font-size: 3.3rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.sec-1-ctr-txt p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.sec-1-ctr-btn{
+    justify-content: center;
+    gap: 30px;
+
+}
+.sec-1-ctr-btn .btn{
+    font-size: 16px;
+    padding: 7px 44px;
+    border-radius: 30px;    
 }
