@@ -1,7 +1,8 @@
-import { Container, Navbar, Nav, Button } from "react-bootstrap";
+import { Container, Navbar, Nav, Button, Col, Row } from "react-bootstrap";
 
 
 function Section(){
+  
     return(
        <>
 
@@ -37,7 +38,54 @@ function Section(){
       </div>
 
       </div>
-    
+
+      {/* sec-2 */}
+
+      <div className="sec-2-bg">
+         <div className="sec-2">
+        <div className="continues-slide d-flex justify-content-center gap-4">
+          <div className="silde-img">
+            <img src="/neurowave-09.png" alt="Neurowave 09" />
+          </div>
+          <div className="silde-img">
+            <img src="/neurowave-10.png" alt="Neurowave 10" />
+          </div>
+          <div className="silde-img">
+            <img src="/neurowave-11.png" alt="Neurowave 11" />
+          </div>
+          <div className="silde-img">
+            <img src="/neurowave-12.png" alt="Neurowave 12" />
+          </div>
+          <div className="silde-img">
+            <img src="/neurowave-13.png" alt="Neurowave 13" />
+          </div>
+          <div className="silde-img">
+            <img src="/neurowave-14.png" alt="Neurowave 14" />
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div className="sec-2-cont">
+        <Container>
+      <Row>
+        <Col>
+        <h2>Parchis Club Wants New Members</h2>
+        <p>It is very important for the customer to be aware of the fact that the customer needs to be able to decorate the product in the two elements</p>
+        </Col>
+        <Col>
+        <div className="sec-2-right">
+          <img src="/image.png" alt="" />
+        <h4>Introducing Aquatik Esports | Now Recruiting</h4>
+        <div className="sec-2-right-p d-flex gap-4">
+          <p>Lorem Ipsum is simply</p> <p>Lorem Ipsum is simply</p>
+        </div>
+        </div>
+        </Col>
+      </Row>
+      
+    </Container>
+      </div>
      
        </>
      

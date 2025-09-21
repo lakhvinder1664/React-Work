@@ -11,7 +11,7 @@
 }
 .top-nav {
     border-radius: 0 0 19px 19px; 
-    margin: -3px 113px;
+    margin: -3px 40px;
     padding: 15px 20px;
     position: relative;
     background: #1a1a1a; 
@@ -26,8 +26,7 @@
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
-    width: 100vw;                 
-    height: 170vh; 
+    padding-bottom: 22%;
     text-align: center;
 }
 
@@ -55,7 +54,54 @@
 
 }
 .sec-1-ctr-btn .btn{
+    margin: 38px 0;
     font-size: 16px;
     padding: 7px 44px;
     border-radius: 30px;    
+}
+
+.sec-2-bg{
+    border: 2px solid green;
+     background: #1e1e1e;
+}
+.sec-2{
+    margin: 0 7%;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.slide-img img{
+    width: 100px;
+}
+
+.continues-slide {
+  animation: scroll 20s linear infinite; /* marquee effect */
+}
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+ .sec-2-cont{
+    color: white;
+    background: black;
+}
+ .sec-2-cont h2{
+    background: black;
+    line-height: 2;
+    font-size: 35px;
+}
+.sec-2-right{
+    margin: 75px 0;
+}
+.sec-2-right h4{
+    padding: 0px 20px;
+}
+.sec-2-right-p {
+    padding: 0 40px;
 }
