@@ -70,8 +70,25 @@ function Section(){
         <Container>
       <Row>
         <Col>
-        <h2>Parchis Club Wants New Members</h2>
+       <div className="sec-2-left">
+         <h2>Parchis Club Wants New Members</h2>
         <p>It is very important for the customer to be aware of the fact that the customer needs to be able to decorate the product in the two elements</p>
+       
+       <div className="sec-2-left-bottom">
+        <div className="three-text">
+          <ul>
+            <li>04</li>
+            <li>320H</li>
+            <li>64K</li>
+          </ul>
+          <ul className="bottom-three-txt">
+            <li>League</li>
+            <li>Total Streams</li>
+            <li>Awarded</li>
+          </ul>
+        </div>
+       </div>
+       </div>
         </Col>
         <Col>
         <div className="sec-2-right">
@@ -83,7 +100,6 @@ function Section(){
         </div>
         </Col>
       </Row>
-      
     </Container>
       </div>
      

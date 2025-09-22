@@ -1,3 +1,8 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 @font-face {
   font-family: "Ammonite";
   src: url("./assets/fonts/Ammonite-Regular.ttf") format("truetype");
@@ -61,8 +66,9 @@
 }
 
 .sec-2-bg{
-    border: 2px solid green;
-     background: #1e1e1e;
+    border-bottom: 2px solid green;
+    border-top: 2px solid green;
+    background: #1e1e1e;
 }
 .sec-2{
     margin: 0 7%;
@@ -87,6 +93,9 @@
 }
 
 
+.sec-2-left{
+    margin: 85px 0;
+}
  .sec-2-cont{
     color: white;
     background: black;
@@ -96,6 +105,31 @@
     line-height: 2;
     font-size: 35px;
 }
+.sec-2-cont p{
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.sec-2-left-bottom{
+    background: rebeccapurple;
+    padding: 27px 25px;
+    border-radius: 20px;
+}
+.three-text{
+    border: 3px solid green;
+    border-radius: 10px;
+    font-size: 45px;
+    background: black;
+    padding: 30px 10px;
+}
+.three-text ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+.bottom-three-txt{
+    font-size: 17px;
+}
+  
 .sec-2-right{
     margin: 75px 0;
 }
@@ -105,3 +139,4 @@
 .sec-2-right-p {
     padding: 0 40px;
 }
+
