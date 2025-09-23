@@ -688,16 +688,18 @@ body{
 
 /* sec-7 */
 .footer{
-  padding: 50px 0;
-  color: white;
-  background-image: url("/Header & Banner second.png");
+    padding: 50px 40px;
+    border-radius: 40px 40px 0 0;
+    color: white;
+    background-image: url("/Header & Banner second.png");
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
+    
 }
 
-.footer-left-cont{
-  
+.footer-cont-left h4{
+  font-family: "ammonite", sans-serif;
 }
 
 .footer-left-cont p{

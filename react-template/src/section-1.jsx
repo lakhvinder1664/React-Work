@@ -497,12 +497,13 @@ const [playVideo, setPlayVideo] = useState(false);
         </Container>
       </div>
 
-      <div className="footer">
+      <Container>
+        <div className="footer">
         <Container>
           <Row>
             <Col>
               <div className="footer-cont-left">
-                <h4>Parchis Club</h4>
+                <h4>parchis club</h4>
                 <p>It is very important for the customer to be aware of the fact that the customer needs to be able to decorate the product in the two elements</p>
                 <div className="social">
                   <h5>Find Us On:</h5>
@@ -546,6 +547,7 @@ const [playVideo, setPlayVideo] = useState(false);
           </Row>
         </Container>
       </div>
+      </Container>
        </>
      
 
