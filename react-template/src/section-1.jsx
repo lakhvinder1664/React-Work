@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Container, Navbar, Nav, Button, Col, Row } from "react-bootstrap";
 import Carousel from "./slide-img";
+import { useState } from "react";
+
 
 function Section(){
   
@@ -48,6 +50,18 @@ function runCounter(counter) {
     counters.forEach(counter => observer.observe(counter));
   }, []);
 
+  const devCarouselRef = useRef(null);
+
+const scrollLeft = () => {
+  devCarouselRef.current.scrollBy({ left: -200, behavior: "smooth" });
+};
+
+const scrollRight = () => {
+  devCarouselRef.current.scrollBy({ left: 200, behavior: "smooth" });
+};
+
+const [playVideo, setPlayVideo] = useState(false);
+
     return(
        <>
 
@@ -63,7 +77,7 @@ function runCounter(counter) {
             <Nav.Link href="#features">About</Nav.Link>
             <Nav.Link href="#portfolio">Portfolio</Nav.Link>
             <Nav.Link href="#news">News</Nav.Link>
-            <Button variant="success">Read More</Button>
+            <Button style={{ background: "#a200ff", borderRadius: "30px" }}>Read More</Button>
           </Nav>
         </Container>
       </Navbar>
@@ -133,13 +147,31 @@ function runCounter(counter) {
         </Col>
         <Col>
         <div className="sec-2-right">
-          <img src="/image.png" alt="" />
+      {!playVideo ? (
+        <div className="thumbnail" onClick={() => setPlayVideo(true)}>
+          <img src="/image.png" alt="Video Thumbnail" style={{ cursor: "pointer" }} />
+          <div className="play-btn"></div>
+        </div>
+      ) : (
+        <div className="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/FEKdk-cPVmg?autoplay=1"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
+      )}
+          <div className="sec-2-right">
         <h4>Introducing Aquatik Esports | Now Recruiting</h4>
         <div className="sec-2-right-p d-flex gap-4">
           <p> <img src="/bx_bxs-check-circle.png" alt="" />Lorem Ipsum is simply</p> <p><img src="/bx_bxs-check-circle.png" alt="" />Lorem Ipsum is simply</p>
         </div>
         </div>
+        </div>
         </Col>
+        
       </Row>
       <div className="card-sec">
         <Container>
@@ -224,6 +256,296 @@ function runCounter(counter) {
       </div>
      
 
+     <div className="sec-3">
+      <Container>
+        <Row>
+          <Col md-6>
+          <div className="sec-3-left-carousel">
+    <div className="sec-3-left-cont">
+      <div className="sec-3-left-img-line d-flex">
+        <img src="/Frame 1320.png" alt="" />
+        <div className="lineimg">
+          <img src="/Line 1.png" alt="" />
+        </div>
+      </div>
+      <div className="sec-3-left-cont-img-txt">
+        <h3>Game development</h3>
+        <p>Our works have been internationally recognized for their design, stories and art direction. Together, we can transform your ideas into captivating games, on desktop, mobile or console.</p>
+        <a href="">Learn More</a>
+      </div>
+    </div>
+
+    <div className="sec-3-left-cont">
+      <div className="sec-3-left-img-line d-flex">
+        <img src="/Frame 1320 (3).png" alt="" />
+        <div className="lineimg">
+          <img src="/Line 1.png" alt="" />
+        </div>
+      </div>
+      <div className="sec-3-left-cont-img-txt">
+        <h3>Game design</h3>
+        <p>We have long experience in creating educational and serious games with a wide range of topics, from history to ecology.</p>
+        <a href="">Learn More</a>
+      </div>
+    </div>
+    <div className="sec-3-left-cont">
+      <div className="sec-3-left-img-line d-flex">
+        <img src="/Frame 1320 (2).png" alt="" />
+        <div className="lineimg">
+          <img src="/Line 1.png" alt="" />
+        </div>
+      </div>
+      <div className="sec-3-left-cont-img-txt">
+        <h3>Art direction</h3>
+        <p>We make award-winning games with unique art direction. Together, we can transform your ideas into captivating games, on desktop, mobile or console.</p>
+        <a href="">Learn More</a>
+      </div>
+    </div>
+    <div className="sec-3-left-cont">
+      <div className="sec-3-left-img-line d-flex">
+        <img src="/Frame 1320 (1).png" alt="" />
+        <div className="lineimg">
+          <img src="/Line 1 (1).png" alt="" />
+        </div>
+      </div>
+      <div className="sec-3-left-cont-img-txt">
+        <h3>MUTLIPLATFROM DEVELOPMENT</h3>
+        <p>We make award-winning games with unique art direction. Together, we can transform your ideas into captivating games, on desktop, mobile or console.</p>
+        <a href="">Learn More</a>
+      </div>
+    </div>
+  </div>
+         
+          </Col>
+          <Col md-6>
+          <div className="sec-3-right-cont">
+            <div className="sec-3-right-cont-txt">
+              <h4>Key Features</h4>
+              <p>We are ready to deliver your vision across multiple platforms, mobile, or desktop. Games are the language of the 21st century and we can help you harness their unique power.</p>
+              <p>Games are a language of storytelling. We’re looking for games that develop and expand this language.</p>
+              <Button style={{ background: "#a200ff"}} >Read More</Button>
+            </div>
+          </div>
+          </Col>
+        </Row>
+      </Container>
+     </div>
+
+
+    <div className="sec-4">
+      <Container>
+        <Row>
+          <Col>
+            <div className="sec-4-img-cont">
+              {!playVideo ? (
+    <div className="thumbnail" onClick={() => setPlayVideo(true)}>
+      <img src="/call of duty img.png" alt="Video Thumbnail" />
+      <div className="play-btn"></div>
+    </div>
+  ) : (
+    <iframe
+      src="https://www.youtube.com/embed/tzIPoiZwPYo?autoplay=1"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  )}
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+          <div className="cod-video-bottom-p">
+            <p style={{fontSize: "14px"}}>We are ready to deliver your vision across multiple platforms, mobile, or desktop. Games are the language of the 21st century and we can help you harness their unique power.</p>
+          <p>Games are a language of storytelling. We’re looking for games that develop and expand this language.</p>
+          </div>
+          </Col>
+          <Col>
+           <div className="cod-video-bottom-p">
+            <p style={{fontSize: "14px"}}>We are ready to deliver your vision across multiple platforms, mobile, or desktop. Games are the language of the 21st century and we can help you harness their unique power.</p>
+          <p>Games are a language of storytelling. We’re looking for games that develop and expand this language.</p>
+          </div>
+          </Col>
+
+        </Row>
+      </Container>
+
+      <Container>
+        <Row>
+            <div className="sec-4-head d-flex justify-content-between">
+              <h4>Meet our developers</h4>
+              <Button style={{ background: "#a200ff"}} >See All</Button>
+            </div>
+          </Row>
+
+          <div className="carousel-wrapper">
+  <Button className="carousel-btn left" onClick={scrollLeft} style={{background: "#48faf5"}}>
+    &#8249;
+  </Button>
+  <Button className="carousel-btn left" onClick={scrollRight} style={{background: "#48faf5"}}>
+    &#8249;
+  </Button>
+
+  <div className="moving-crousel d-flex gap-5" ref={devCarouselRef}>
+    <div className="mc-1">
+      <img src="/Ellipse 1.png" alt="" />
+      <h4>Martin Danelio</h4>
+      <p>Founder</p>
+    </div>
+    <div className="mc-1">
+      <img src="/image (1).png" alt="" />
+      <h4>Kelly Orban</h4>
+      <p>Manager</p>
+    </div>
+    <div className="mc-1">
+      <img src="/Ellipse 1.png" alt="" />
+      <h4>Alice Thompson</h4>
+      <p>Designer</p>
+    </div>
+    <div className="mc-1">
+      <img src="/image (1).png" alt="" />
+      <h4>Samuel Chang</h4>
+      <p>Developer</p>
+    </div>
+
+  </div>
+
+  <Button className="carousel-btn right" onClick={scrollRight}>
+    &#8250;
+  </Button>
+</div>
+      </Container>
+    </div>
+
+   <div className="sec-5">
+  <Container>
+    <Row>
+      <div className="sec-5-head-txt text-center">
+        <h4>Our latest news</h4>
+        <p>
+          It is very important for the customer to be aware of the fact that the
+          customer needs to be able to decorate the product in the two elements
+        </p>
+      </div>
+    </Row>
+
+    <Row>
+      <div className="second-crousel d-flex justify-content-center gap-4">
+        <div className="sc-1">
+          <img src="/Frame 1330.png" alt="" />
+          <div className="sc-1-overlay">
+            <p>MAY 2, 2024 | ADMIN</p>
+            <h4>A Guide to Latest Style and Techniques</h4>
+            <a href="">Learn More</a>
+          </div>
+        </div>
+
+        <div className="sc-1">
+          <img src="/image (2).png" alt="" />
+          <div className="sc-1-overlay">
+            <p>MAY 2, 2024 | ADMIN</p>
+            <h4>A Guide to Latest Style and Techniques</h4>
+            <a href="">Learn More</a>
+          </div>
+        </div>
+
+        <div className="sc-1">
+          <img src="/image (3).png" alt="" />
+          <div className="sc-1-overlay">
+            <p>MAY 2, 2024 | ADMIN</p>
+            <h4>A Guide to Latest Style and Techniques</h4>
+            <a href="">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </Row>
+  </Container>
+</div>
+
+
+      <div className="sec-6">
+        <Container>
+          <Row>
+            <Col>
+              <div className="sec-6-left-cont">
+                <div className="sec-6-centre-head"><h4>The Intelligent Revolution: AI Shaping Our Future</h4></div>
+                <div className="review-card">
+                  <p>The website's user-friendly interface makes it easy to navigate and access a wide range of content, including cutting-edge AI solutions, informative case studies, and expert insights. Networking opportunities and funding resources</p>
+                  <div className="card-user d-flex justify-content-between">
+                      <div className="card-user-name">
+                        <h5>James Smiths</h5>
+                        <p>Client</p>
+                      </div>
+                      <div className="review-star-img">
+                        <img src="/Star 1.png" alt="" />
+                        <img src="/Star 1.png" alt="" />
+                        <img src="/Star 1.png" alt="" />
+                        <img src="/Star 1.png" alt="" />
+                        <img src="/Star 1.png" alt="" />
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col>
+              <div className="sec-6-right-cont">
+                <img src="/image (4).png" alt="" />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      <div className="footer">
+        <Container>
+          <Row>
+            <Col>
+              <div className="footer-cont-left">
+                <h4>Parchis Club</h4>
+                <p>It is very important for the customer to be aware of the fact that the customer needs to be able to decorate the product in the two elements</p>
+                <div className="social">
+                  <h5>Find Us On:</h5>
+                  <div className="social-icons">
+                    <img src="/Symbol.png" alt="" />
+                    <img src="/Symbol (1).png" alt="" />
+                    <img src="/Symbol (2).png" alt="" />
+                    <img src="/Symbol (3).png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col>
+            <div className="footer-cont-center">
+              <h4>Quick Links</h4>
+              <ul>
+                <li>About Us</li>
+                <li>Our Services</li>
+                <li>Our Portfolio</li>
+                <li>Our Teams</li>
+                <li>Our Testimonials</li>
+              </ul>
+            </div>
+            </Col>
+            <Col>
+            <div className="footer-cont-right">
+              <h4>Contact Info</h4>
+              <div className="footer-p">
+                <div className="footer-p-img-txt d-flex">
+                  <img src="/Container.png" alt="" />
+                  <p>1234, ABC Apartments, XYZ Street, Near LMN Market, Sector 15, Cityname - 110011, State, India.</p>
+                </div>
+                <div className="footer-p-img-txt-bottom d-flex">
+                 <img src="/Symbol (4).png" alt="" />
+                  <p>+91-9876543210</p>
+                </div>
+                
+              </div>
+            </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
        </>
      
 
