@@ -729,17 +729,21 @@ body{
 
 /* sec-7 */
 .footer{
-    padding: 50px 40px;
+    padding: 36px 40px;
     border-radius: 40px 40px 0 0;
     color: white;
     background-image: url("/Header & Banner second.png");
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;
-    
+      position: relative;
+  background-color: transparent !important; /* fully transparent */
+  border: 2px solid #37ff9f;               /* neon border */
+  box-shadow: 0 0 10px #8a2be2;
 }
 
 .footer-cont-left h4{
+  font-size: 36px;
   font-family: "ammonite", sans-serif;
 }
 
@@ -753,6 +757,9 @@ body{
 
 .footer-cont-center {
 padding: 0 30%;
+}
+.footer-cont-center h4 {
+  font-size: 24px;
 }
 .footer-cont-center li {
    line-height: 40px;
@@ -776,6 +783,9 @@ line-height: 3;
         padding: 0 100px;
 }
 
+.footer-cont-right h4{
+  font-size: 24px;
+}
 
 .footer-p-img-txt img{
       margin: 7px 8px;
