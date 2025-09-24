@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import { Container, Navbar, Nav, Button, Col, Row } from "react-bootstrap";
-import Carousel from "./slide-img";
 import { useState } from "react";
 
 
 function Section(){
-  
+ 
+  // sec-2 counter
   useEffect(() => {
     const counters = document.querySelectorAll(".counter");
 
@@ -50,16 +50,25 @@ function runCounter(counter) {
     counters.forEach(counter => observer.observe(counter));
   }, []);
 
-  const devCarouselRef = useRef(null);
+
+  // cicklable crousel
+const devCarouselRef = useRef(null);
 
 const scrollLeft = () => {
-  devCarouselRef.current.scrollBy({ left: -200, behavior: "smooth" });
+  if (devCarouselRef.current) {
+    devCarouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  }
 };
 
 const scrollRight = () => {
-  devCarouselRef.current.scrollBy({ left: 200, behavior: "smooth" });
+  console.log("scrollRight clicked");
+  if (devCarouselRef.current) {
+    devCarouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  }
 };
 
+
+// sec-2 video
 const [playVideo, setPlayVideo] = useState(false);
 
     return(
@@ -103,14 +112,22 @@ const [playVideo, setPlayVideo] = useState(false);
       <div class="sec-2-bg">
   <div class="sec-2">
     <div class="marquee">
-      <div class="marquee-content">
-        <img src="/neurowave-09.png" alt="Neurowave 09" />
-        <img src="/neurowave-10.png" alt="Neurowave 10" />
-        <img src="/neurowave-11.png" alt="Neurowave 11" />
-        <img src="/neurowave-12.png" alt="Neurowave 12" />
-        <img src="/neurowave-13.png" alt="Neurowave 13" />
-        <img src="/neurowave-14.png" alt="Neurowave 14" />
-      </div>
+      <div class="marquee-track">
+    <div class="slide"><img src="/neurowave-09.png" alt="Neurowave 09" /></div>
+    <div class="slide"><img src="/neurowave-10.png" alt="Neurowave 10" /></div>
+    <div class="slide"><img src="/neurowave-11.png" alt="Neurowave 11" /></div>
+    <div class="slide"><img src="/neurowave-12.png" alt="Neurowave 12" /></div>
+    <div class="slide"><img src="/neurowave-13.png" alt="Neurowave 13" /></div>
+    <div class="slide"><img src="/neurowave-14.png" alt="Neurowave 14" /></div>
+
+    {/* <!-- duplicate again for infinite scroll --> */}
+    <div class="slide"><img src="/neurowave-09.png" alt="Neurowave 09" /></div>
+    <div class="slide"><img src="/neurowave-10.png" alt="Neurowave 10" /></div>
+    <div class="slide"><img src="/neurowave-11.png" alt="Neurowave 11" /></div>
+    <div class="slide"><img src="/neurowave-12.png" alt="Neurowave 12" /></div>
+    <div class="slide"><img src="/neurowave-13.png" alt="Neurowave 13" /></div>
+    <div class="slide"><img src="/neurowave-14.png" alt="Neurowave 14" /></div>
+  </div>
     </div>
   </div>
 </div>
@@ -379,15 +396,10 @@ const [playVideo, setPlayVideo] = useState(false);
             </div>
           </Row>
 
-          <div className="carousel-wrapper">
-  <Button className="carousel-btn left" onClick={scrollLeft} style={{background: "#48faf5"}}>
-    &#8249;
-  </Button>
-  <Button className="carousel-btn left" onClick={scrollRight} style={{background: "#48faf5"}}>
-    &#8249;
-  </Button>
+  <div className="carousel-wrapper">
+    <button className="carousel-btn left" onClick={scrollLeft}> &#8249;</button>
 
-  <div className="moving-crousel d-flex gap-5" ref={devCarouselRef}>
+ <div className="moving-crousel d-flex" ref={devCarouselRef}>
     <div className="mc-1">
       <img src="/Ellipse 1.png" alt="" />
       <h4>Martin Danelio</h4>
@@ -408,12 +420,19 @@ const [playVideo, setPlayVideo] = useState(false);
       <h4>Samuel Chang</h4>
       <p>Developer</p>
     </div>
-
+    <div className="mc-1">
+      <img src="/Ellipse 1.png" alt="" />
+      <h4>Alice Thompson</h4>
+      <p>Designer</p>
+    </div>
+    <div className="mc-1">
+      <img src="/image (1).png" alt="" />
+      <h4>Samuel Chang</h4>
+      <p>Developer</p>
+    </div>
   </div>
-
-  <Button className="carousel-btn right" onClick={scrollRight}>
-    &#8250;
-  </Button>
+  
+    <button className="carousel-btn right" onClick={scrollRight}> &#8250;</button>
 </div>
       </Container>
     </div>
