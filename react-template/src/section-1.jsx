@@ -86,7 +86,7 @@ const [playVideo, setPlayVideo] = useState(false);
             <Nav.Link href="#features">About</Nav.Link>
             <Nav.Link href="#portfolio">Portfolio</Nav.Link>
             <Nav.Link href="#news">News</Nav.Link>
-            <Button style={{ background: "#a200ff", borderRadius: "30px" }}>Read More</Button>
+            <Button className="page-btn">Read More</Button>
           </Nav>
         </Container>
       </Navbar>
@@ -96,7 +96,7 @@ const [playVideo, setPlayVideo] = useState(false);
         <h2>Become part of the <br /> amazing Esport community</h2>
         <p>It is very important for the customer to be aware of the fact that the customer needs to be able to decorate the product in the two elements</p>
         <div className="d-flex mb-2 sec-1-ctr-btn">
-        <Button variant="success" size="lg" style={{ background: "#a200ff"}}>
+        <Button className="page-btn" size="lg">
           Get Started
         </Button>
         <Button variant="" size="lg" style={{color: "white", border: "1px solid white"}}>

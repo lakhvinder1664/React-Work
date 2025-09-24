@@ -44,6 +44,14 @@ body{
   box-shadow: 0 0 10px #8a2be2;            /* glow effect */
 }
 
+.page-btn {
+  background: #8a2be2;       
+  border-radius: 30px;
+  border: 2px solid #37ff9f;  
+  position: relative;
+  box-shadow: 0 0 10px #8a2be2; 
+}
+
 
 .sec-1{
   background-image: url("./assets/Header & Banner.png");
@@ -393,7 +401,7 @@ body{
 .sec-3{
   padding: 50px 0;
   color: white;
-  background-image: url("/react-template/src/assets/Key\ Features.png");
+  background-image: url("/Key Features.png");
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat; 
